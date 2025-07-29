@@ -11,9 +11,10 @@ function App() {
 //Click handling
   function handleButtonClick(value) {
     if(!isNaN(value) || value === ".") {
+      
     setDisplayvalue(prev => 
       prev === "0" ? value : prev + value
-    )} else if(["+", "-", "x", "÷"].includes(value)) {
+    )} else if(["+", "-", "x", "÷", "%"].includes(value)) {
       setPreviousValue(displayvalue);
       setDisplayvalue("0");
       setOperation(value);
@@ -26,6 +27,7 @@ function App() {
       }
     }
   }
+
  // Clear display area
   function handleClear() {
     setDisplayvalue("0")
@@ -54,9 +56,13 @@ function computeResult() {
       breack;
     default:
       return b;
-      breack;
+      break;
   }
+
+
 }
+
+  
 
   return (
     <>
