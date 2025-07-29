@@ -1,9 +1,14 @@
 
-export default function Button( { onButtonClick } ) {
+export default function Button( { onButtonClick, onClear } ) {
 
     function handleClick(event) {
         const value = event.target.value
+
+        if(value === "AC"){
+            onClear()
+        }else{
         onButtonClick(value)
+        }
     }
 
     return (

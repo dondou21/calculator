@@ -7,13 +7,19 @@ function App() {
   const [displayvalue, setDisplayvalue] = useState("0")
 
   function handleButtonClick(value) {
-    setDisplayvalue(prev => prev + value)
+    setDisplayvalue(prev => 
+      prev === "0" && value!== "."? value : prev + value
+    )
+  }
+
+  function handleClear() {
+    setDisplayvalue("0")
   }
 
   return (
     <>
       <Display value={displayvalue} />
-      <Button onButtonClick={handleButtonClick} />
+      <Button onButtonClick={handleButtonClick} onClear={handleClear} />
     </>
   )
 }
