@@ -1,8 +1,12 @@
-## Requirement
+# React + Vite
 
----
-Create an app that performs basic calculator functionality using React as shown in the screenshot below. The calculator app should be designed using tailwindcss.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-The video below shows that the app should work so that if you choose the operation, the numbers you entered before will disappear. 
+Currently, two official plugins are available:
 
-For example, if you enter 2 + 3 instead of choosing the equal sign operator you choose another operator the app should show first the result of the first operation and proceed to the next. (it is also shown in the video)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
