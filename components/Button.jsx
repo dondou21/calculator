@@ -23,7 +23,7 @@ export default function Button( { onButtonClick, onClear } ) {
                 <input type="button" value="7" onClick={handleClick} />
                 <input type="button" value="8" onClick={handleClick} />
                 <input type="button" value="9" onClick={handleClick} />
-                <input id="right-side" type="button" value="X" onClick={handleClick} />
+                <input id="right-side" type="button" value="x" onClick={handleClick} />
             </div>
             <div className="btn-sub-container">
                 <input type="button" value="4" onClick={handleClick} />
