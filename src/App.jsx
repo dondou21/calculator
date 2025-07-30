@@ -7,13 +7,20 @@ function App() {
   const [displayvalue, setDisplayvalue] = useState("0")
   const [previousValue, setPreviousValue] = useState(null)
   const [operation, setOperation] = useState(null)
+  const [isResult, setIsResult] = useState(false)
+
 
 //Click handling
   function handleButtonClick(value) {
     if(!isNaN(value) || value === ".") {
       
-    setDisplayvalue(prev => 
-      prev === "0" ? value : prev + value
+    setDisplayvalue(prev => {
+      if(isResult){
+        setDisplayvalue(value)
+        setIsResult(false)
+      } else {
+      return prev === "0"? value : prev + value}
+    }
     )} else if(["+", "-", "x", "÷", "%"].includes(value)) {
       setPreviousValue(displayvalue);
       setDisplayvalue("0");
@@ -37,6 +44,8 @@ function App() {
 function computeResult() {
   const a = parseFloat(previousValue)
   const b = parseFloat(displayvalue)
+
+  setIsResult(prev => !prev)
 
   switch (operation) {
     case "+":
